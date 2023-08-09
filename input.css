@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.content{
+    @apply bg-[#141D2F] w-screen h-screen flex justify-center items-center;
+}
+.gitpro{
+    @apply lg:w-1/2 ms:w-11/12 ms:h-full h-4/5 ms:m-4;
+}
+.header{
+    @apply ms:text-2xl text-3xl font-bold text-white my-3;
+}
+.gitsearch{
+    @apply  bg-[#1E2A47] p-2 rounded-[15px];
+}
+.search-label{
+    @apply flex justify-start items-center;
+}
+.material-icons{
+    @apply w-[5%] text-[#0079FE] ms:m-1 ml-3;
+}
+.search-input{
+    @apply  ms:w-[70%] w-[78%] bg-transparent p-2 outline-none text-white font-light m-1 border-none;
+}
+.search-button{
+    @apply  ms:w-[20%] w-[15%] p-2 font-bold bg-[#0079FE] text-white rounded-[10px];
+}
+.gitcard{
+    @apply ms:h-4/5 h-3/5 bg-[#1E2A47] rounded-[15px] mt-2 flex;
+}
+.avatar{
+    @apply w-1/4 h-full flex justify-center p-2;
+}
+.gitavatar{
+    @apply ms:mt-4 ms:w-[80px] ms:h-[80px] w-[120px] h-[120px] rounded-[50%];
+}
+.gitdata{
+    @apply w-3/4 h-full py-4 px-6;
+}
+.njoin{
+    @apply flex ms:flex-col ms:items-start justify-between items-center;
+}
+.name{
+    @apply font-bold ms:text-xl text-2xl text-white;
+}
+.joined{
+    @apply font-extralight ms:text-[11px] text-[14px] text-white;
+}
+.logid{
+    @apply font-extralight text-[14px] text-[#0079FE] my-1;
+}
+.gitbio{
+    @apply font-extralight text-[14px] text-white my-2;
+}
+.repfollow{
+    @apply flex ms:flex-col ms:justify-start ms:items-start ms:px-2 justify-between bg-[#141C2F] items-center rounded-[10px] py-3 px-10;
+}
+.repovalue{
+    @apply font-extralight text-[14px] text-white;
+}
+.repnum{
+    @apply font-extrabold text-white;
+}
+.gitsocial{
+    @apply flex ms:flex-col ms:items-start ms:flex-nowrap flex-wrap h-1/3 justify-center items-center;
+}
+.social{
+    @apply w-1/2 items-center flex ms:my-2;
+}
+.sociallink{
+    @apply ms:block font-extralight text-[14px] text-white ml-2;
+}
+.psocial{
+    @apply ms:block inline-block font-extralight text-[14px] text-white ml-2;
+}

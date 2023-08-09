@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Githut API</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="/script/script.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+<div class="content main">
+    <div class="gitpro">
+        <h1 class="header">GitHub API</h1>
+        <div class="gitsearch">
+            <label class="search-label">
+                <span class="material-icons">search</span>
+                <input id="loginid" type="text" class="search-input" placeholder="Search Github Username">
+                <button type="submit" class="search-button" onclick="fetchData()">Search</button>
+            </label>
+        </div>
+        <div class="gitcard">
+            <div class="avatar">
+                <img src="/images/profile.png" alt="No image" class="gitavatar">
+            </div>
+            <div class="gitdata">
+                <div class="namebio h-1/3">
+                    <div class="njoin">
+                        <h2 id="gitname" class="name">no name</h2>
+                    <p id="creationdate" class="joined">joined date</p>
+                    </div>
+                    <p id="login" class="logid">unnamed211</p>
+                    <p id="bio" class="gitbio">There is no bio</p>
+                </div>
+                <div class="repfollow">
+                    <div class="repo">
+                        <p class="repovalue">Repos</p>
+                        <p id="rval" class="repnum">0</p>
+                    </div>
+                    <div class="following">
+                        <p class="repovalue">Followers</p>
+                        <p id="fval" class="repnum">0</p>
+                    </div>
+                    <div class="followers">
+                        <p class="repovalue">Following</p>
+                        <p id="foval" class="repnum">0</p>
+                    </div>
+                </div>
+                <div class="gitsocial">
+                    <div class="location social">
+                        <i class="fas fa-map-marker-alt text-white"></i>
+                        <p id="locval" class="psocial">not avaliable</p>
+                    </div>
+                    <div class="twitter social">
+                        <i class="fab fa-twitter text-white"></i>
+                        <a id="twlink" href="#" class="sociallink">not avaliable</a>
+                    </div>
+                    <div class="gitlink social">
+                        <i class="fab fa-github text-white"></i>
+                        <a id="gtlink" href="#" class="sociallink">not avaliable</a>
+                    </div>
+                    <div class="organization social">
+                        <i class="fas fa-building text-white"></i>
+                        <p id="ogval" class="psocial">no works</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
+</body>
+</html>
