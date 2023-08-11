@@ -1,4 +1,3 @@
-
 function fetchData() {
     var user=document.getElementById("loginid").value;
     console.log(user);
@@ -13,17 +12,17 @@ function fetchData() {
                 alert("GitHub ID not found! Try Again");
             }
             else{
-                const avatarUrl = data.avatar_url;
-                const name = data.name;
-                const createdAt = data.created_at;
-                const login = data.login;
-                const bio = data.bio;
-                const repos = data.public_repos;
-                const followers = data.followers;
-                const following = data.following;
-                const location = data.location;
-                const twitter = data.twitter_username;
-                const company = data.company;
+                var avatarUrl = data.avatar_url;
+                var name = data.name;
+                var createdAt = data.created_at;
+                var login = data.login;
+                var bio = data.bio;
+                var repos = data.public_repos;
+                var followers = data.followers;
+                var following = data.following;
+                var location = data.location;
+                var twitter = data.twitter_username;
+                var company = data.company;
 
                 const imgElements = document.getElementsByClassName('gitavatar');
                 for (let i = 0; i < imgElements.length; i++) {
@@ -53,7 +52,7 @@ function fetchData() {
                 else
                 {
                     twitter="#";
-                    tw.innerHTML=twitter;
+                    tw.innerHTML="not avaliable";
                     tw.href="https://twitter.com/"+twitter;
                 }
                 var gt=document.getElementById("gtlink");

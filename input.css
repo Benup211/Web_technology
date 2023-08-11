@@ -27,7 +27,7 @@
     @apply  ms:w-[20%] w-[15%] p-2 font-bold bg-[#0079FE] text-white rounded-[10px];
 }
 .gitcard{
-    @apply ms:h-4/5 h-3/5 bg-[#1E2A47] rounded-[15px] mt-2 flex;
+    @apply ms:h-auto h-3/5 bg-[#1E2A47] rounded-[15px] mt-2 flex;
 }
 .avatar{
     @apply w-1/4 h-full flex justify-center p-2;
