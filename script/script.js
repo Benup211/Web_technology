@@ -6,7 +6,12 @@ function fetchData() {
     }
     else{
         fetch(`https://api.github.com/users/${user}`)
-        .then(response => response.json())
+        .then(response => {
+            if(response.status === 403){
+                throw new Error("API rate limit exceeded");
+            }
+            return response.json();
+        })
         .then(data => {
             if(data.message=="Not Found"){
                 alert("GitHub ID not found! Try Again");
@@ -41,7 +46,7 @@ function fetchData() {
                 }
                 else
                 {
-                    document.getElementById("locval").innerHTML="not avaliable";
+                    document.getElementById("locval").innerHTML="not available";
                 }
                 var tw=document.getElementById("twlink");
                 if(twitter!=null)
@@ -52,7 +57,7 @@ function fetchData() {
                 else
                 {
                     twitter="#";
-                    tw.innerHTML="not avaliable";
+                    tw.innerHTML="not available";
                     tw.href="https://twitter.com/"+twitter;
                 }
                 var gt=document.getElementById("gtlink");
@@ -64,12 +69,16 @@ function fetchData() {
                 }
                 else
                 {
-                    document.getElementById("ogval").innerHTML="not working";
+                    document.getElementById("ogval").innerHTML="not available";
                 }
             }
         })
         .catch(error => { 
-            console.log("Server Error! Try Again");
+            if (error.message === "API rate limit exceeded") {
+                alert("API rate limit exceeded. Please try again later.");
+            } else {
+                console.log("Server Error! Try Again");
+            }
         });
     }
-  }
+}
